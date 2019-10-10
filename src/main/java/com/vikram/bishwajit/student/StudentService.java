@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.vikram.bishwajit.student;
 
 import java.util.ArrayList;
@@ -28,6 +25,10 @@ public class StudentService {
 
 	public Optional<Student> getStudentById(String id) {
 		return studentRepository.findById(id);
+	}
+
+	public void addStudent(Student student) {
+		studentRepository.save(student);
 	}
 
 }
